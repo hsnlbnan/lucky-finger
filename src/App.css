@@ -12,8 +12,13 @@ body {
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  background-color: #646cff;
-  /* animation: dot 1s infinite; */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: system-ui;
+  font-weight: 700;
+  font-size: 14px;
 }
 
 .drawing {

@@ -21,6 +21,7 @@ function App() {
       y: clientY,
       color: getRandomeColor(),
       id: getRandomNumber(),
+      piece: piece + 1,
     };
     setPiece(piece + 1);
     setDots([...dots, dot]);
@@ -70,7 +71,7 @@ function App() {
       </h3>
 
       <div className="wrapper" onClick={clickHandle}>
-        {dots.map((dot) => (
+        {dots.map((dot, index) => (
           <div
             key={dot.id}
             style={{
@@ -79,7 +80,9 @@ function App() {
               backgroundColor: dot.color,
             }}
             className={`dot ${draw ? "drawing" : ""} ${finish ? "finish" : ""}`}
-          ></div>
+          >
+            {dot.piece}
+          </div>
         ))}
       </div>
 
